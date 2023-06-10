@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/03100ec21e.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sketch Book | Abhee K</title>
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="body">
-    <div class="container" id="container">
-    <div id="canvas" class="canvas"></div>
-    </div>
 
     <div class="btn-divs">
-    <button class="btn" id="btn">Reset</button>
-    <button class="btn" id="draw">Draw(default)</button>
-    <button class="btn" id="rainbow">Rainbow mode</button>
-    <button class="btn" id="colorPick">Pick: <input value="#393939" type="color" name="" id="colorWheel"></button>
+    <button class="btn" id="btn"><i class="fa-solid fa-arrow-rotate-right"></i> Reset </button>
+    <button class="btn" id="draw"><i class="fa-solid fa-paintbrush"></i> Draw(default)</button>
+    <button id="eraser" class="btn"><i class="fa-solid fa-eraser"></i> Eraser</button>
+    <button class="btn" id="rainbow"><i class="fa-solid fa-rainbow"></i> Rainbow mode</button>
+    <button class="btn" id="colorPick"><i class="fa-solid fa-crosshairs"></i> Pick: <input value="#393939" type="color" name="" id="colorWheel"></button>
     </div>
+
+    <div class="container" id="container">
+        <div id="canvas" class="canvas"></div>
+        </div>
 
     <script src="app.js"></script>
 </body>

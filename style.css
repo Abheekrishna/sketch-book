@@ -1,7 +1,7 @@
 body {
     background-color: rgb(232, 232, 232);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     padding: 0 50px;
@@ -25,6 +25,7 @@ body {
     border-radius: 150px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    margin-bottom: 25px;
 }
 .btn:hover  {
     background-color: rgba(40, 40, 40, 0.8);
@@ -32,4 +33,10 @@ body {
 .btn:active {
     background-color: rgba(40, 40, 40, 0.8);
     transform: scale(0.9);
+}
+.btn-divs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 50px;
 }

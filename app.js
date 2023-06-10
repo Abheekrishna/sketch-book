@@ -30,7 +30,17 @@ for (i = 0; i < 30; i++) {
             div.style.backgroundColor = 'rgb(57, 57, 57)';
         })
 
+        div.addEventListener('touchmove', () => {
+            div.style.backgroundColor = 'rgb(57, 57, 57)';
+        })
+
         rainbowBtn.addEventListener('click', () => {
+            div.addEventListener('mousemove', () => {
+                div.style.backgroundColor = `rgb(${rainbow()})`
+            })
+        })
+
+        rainbowBtn.addEventListener('touchmove', () => {
             div.addEventListener('mousemove', () => {
                 div.style.backgroundColor = `rgb(${rainbow()})`
             })

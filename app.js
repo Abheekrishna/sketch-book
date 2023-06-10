@@ -30,7 +30,7 @@ for (i = 0; i < 30; i++) {
             div.style.backgroundColor = 'rgb(57, 57, 57)';
         })
 
-        div.addEventListener('touchmove', () => {
+        div.addEventListener('drag', () => {
             div.style.backgroundColor = 'rgb(57, 57, 57)';
         })
 
@@ -40,8 +40,8 @@ for (i = 0; i < 30; i++) {
             })
         })
 
-        rainbowBtn.addEventListener('touchmove', () => {
-            div.addEventListener('mousemove', () => {
+        rainbowBtn.addEventListener('click', () => {
+            div.addEventListener('drag', () => {
                 div.style.backgroundColor = `rgb(${rainbow()})`
             })
         })

@@ -4,10 +4,7 @@ const canvasDiv = document.getElementById('canvas');
 const rainbowBtn = document.getElementById('rainbow');
 
 
-canvasDiv.style.display = 'grid';
-canvasDiv.style.gridTemplateColumns = 'repeat(30, 1fr)';
-canvasDiv.style.gridTemplateRows = 'repeat(30, 1fr)';
-canvasDiv.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.3)';
+
 
 
 function rainbow () {
@@ -23,8 +20,13 @@ function rainbow () {
 }
 
 drawBtn.addEventListener('click', () =>{
-for (i = 0; i < 30; i++) {
-    for (j = 0; j < 30; j++) {
+    const canvasSize = prompt('Enter a size for your canvas.');
+    canvasDiv.style.display = 'grid';
+    canvasDiv.style.gridTemplateColumns = `repeat(${canvasSize}, 1fr)`;
+    canvasDiv.style.gridTemplateRows = `repeat(${canvasSize}, 1fr)`;
+    canvasDiv.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.3)';
+for (i = 0; i < canvasSize; i++) {
+    for (j = 0; j < canvasSize; j++) {
         const div = document.createElement('div');
         div.addEventListener('mousemove', () => {
             div.style.backgroundColor = 'rgb(57, 57, 57)';

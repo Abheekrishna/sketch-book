@@ -2,9 +2,10 @@ const btn = document.getElementById('btn');
 const drawBtn = document.getElementById('draw');
 const canvasDiv = document.getElementById('canvas');
 const rainbowBtn = document.getElementById('rainbow');
+const colorPickerBtn = document.getElementById('colorPick');
+const colorWheel = document.getElementById('colorWheel');
 
-
-
+const DEFAULT_COLOR = 'rgb(57, 57, 57)'
 
 
 function rainbow () {
@@ -24,16 +25,11 @@ drawBtn.addEventListener('click', () =>{
     canvasDiv.style.display = 'grid';
     canvasDiv.style.gridTemplateColumns = `repeat(${canvasSize}, 1fr)`;
     canvasDiv.style.gridTemplateRows = `repeat(${canvasSize}, 1fr)`;
-    canvasDiv.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.3)';
 for (i = 0; i < canvasSize; i++) {
     for (j = 0; j < canvasSize; j++) {
         const div = document.createElement('div');
         div.addEventListener('mousemove', () => {
-            div.style.backgroundColor = 'rgb(57, 57, 57)';
-        })
-
-        div.addEventListener('drag', () => {
-            div.style.backgroundColor = 'rgb(57, 57, 57)';
+            div.style.backgroundColor = `${colorWheel.value}`;
         })
 
         rainbowBtn.addEventListener('click', () => {
@@ -42,10 +38,8 @@ for (i = 0; i < canvasSize; i++) {
             })
         })
 
-        rainbowBtn.addEventListener('click', () => {
-            div.addEventListener('drag', () => {
-                div.style.backgroundColor = `rgb(${rainbow()})`
-            })
+        colorWheel.addEventListener('click', () => {
+
         })
 
         //Clear

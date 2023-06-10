@@ -7,12 +7,14 @@ body {
     padding: 0 50px;
 
 }
+
 .canvas {
     background-color: white;
     margin-top: 50px;
     margin-bottom: 50px;
     width:  500px;
     height: 500px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
 }
 
 .btn {

@@ -3,6 +3,7 @@ const drawBtn = document.getElementById('draw');
 const canvasDiv = document.getElementById('canvas');
 const rainbowBtn = document.getElementById('rainbow');
 const colorWheel = document.getElementById('colorWheel');
+const eraserBtn = document.getElementById('eraser');
 
 
 function rainbow () {
@@ -39,6 +40,14 @@ for (i = 0; i < canvasSize; i++) {
         btn.addEventListener('click', () => {
             div.style.backgroundColor = 'transparent';
         })
+
+        eraserBtn.addEventListener('click', () => {
+            div.addEventListener('click', () => {
+                div.style.backgroundColor = '#ffffff';
+            })
+        })
+        div.classList.add('div')
+
         canvasDiv.appendChild(div);
     }
 }

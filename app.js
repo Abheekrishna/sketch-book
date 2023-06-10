@@ -2,10 +2,7 @@ const btn = document.getElementById('btn');
 const drawBtn = document.getElementById('draw');
 const canvasDiv = document.getElementById('canvas');
 const rainbowBtn = document.getElementById('rainbow');
-const colorPickerBtn = document.getElementById('colorPick');
 const colorWheel = document.getElementById('colorWheel');
-
-const DEFAULT_COLOR = 'rgb(57, 57, 57)'
 
 
 function rainbow () {
@@ -38,10 +35,6 @@ for (i = 0; i < canvasSize; i++) {
             })
         })
 
-        colorWheel.addEventListener('click', () => {
-
-        })
-
         //Clear
         btn.addEventListener('click', () => {
             div.style.backgroundColor = 'transparent';
@@ -50,4 +43,5 @@ for (i = 0; i < canvasSize; i++) {
     }
 }
 })
+
 
